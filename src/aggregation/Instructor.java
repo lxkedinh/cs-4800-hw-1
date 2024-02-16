@@ -3,9 +3,9 @@ package aggregation;
 public class Instructor {
     private String firstName;
     private String lastName;
-    private int officeNumber;
+    private String officeNumber;
 
-    public Instructor(String firstName, String lastName, int officeNumber) {
+    public Instructor(String firstName, String lastName, String officeNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.officeNumber = officeNumber;
@@ -19,7 +19,7 @@ public class Instructor {
         return lastName;
     }
 
-    public int getOfficeNumber() {
+    public String getOfficeNumber() {
         return officeNumber;
     }
 
@@ -31,7 +31,7 @@ public class Instructor {
         this.lastName = lastName;
     }
 
-    public void setOfficeNumber(int officeNumber) {
+    public void setOfficeNumber(String officeNumber) {
         this.officeNumber = officeNumber;
     }
 }

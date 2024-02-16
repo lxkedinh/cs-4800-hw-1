@@ -48,6 +48,16 @@ public class Folder {
         }
     }
 
+    public void deleteSubfolder(String parentFolderName, String folderToDelete) {
+        if (parentFolderName.equals(name)) {
+            subfolders.remove(folderToDelete);
+        } else {
+            for (Folder subfolder: subfolders.values()) {
+                subfolder.deleteSubfolder(parentFolderName, folderToDelete);
+            }
+        }
+    }
+
     public void addFile(String parentFolderName, String newFileName) {
         if (parentFolderName.equals(name)) {
             containedFiles.add(new File(newFileName, depth + 1));

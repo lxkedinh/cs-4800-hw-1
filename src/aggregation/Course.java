@@ -2,18 +2,24 @@ package aggregation;
 
 public class Course {
     private String name;
-    private Instructor instructor;
-    private Textbook textbook;
+    private Instructor instructorOne;
+    private Instructor instructorTwo;
+    private Textbook textbookOne;
+    private Textbook textbookTwo;
 
-    public Course(String name, Instructor instructor, Textbook textbook) {
+    public Course(String name, Instructor instructorOne, Instructor instructorTwo, Textbook textbookOne, Textbook textbookTwo) {
         this.name = name;
-        this.instructor = instructor;
-        this.textbook = textbook;
+        this.instructorOne = instructorOne;
+        this.instructorTwo = instructorTwo;
+        this.textbookOne = textbookOne;
+        this.textbookTwo = textbookTwo;
     }
 
     public void print() {
         System.out.println("Course name: " + name + "\n" +
-                "Instructor: " + instructor.getFirstName() + " " + instructor.getLastName() + "\n" +
-                "Textbook: \"" + textbook.getTitle() + "\" by " + textbook.getAuthor());
+                "Instructor One: " + instructorOne.getFirstName() + " " + instructorOne.getLastName() + "\n" +
+                "Instructor Two: " + instructorTwo.getFirstName() + " " + instructorTwo.getLastName() + "\n" +
+                "Textbook One: \"" + textbookOne.getTitle() + "\" by " + textbookOne.getAuthor() + "\n" +
+                "Textbook Two: \"" + textbookTwo.getTitle() + "\" by " + textbookTwo.getAuthor());
     }
 }
